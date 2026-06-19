@@ -14,6 +14,7 @@ RUN apt update && \
     git \
     ca-certificates \
     python3 \
+    unzip \
     && rm -rf /var/lib/apt/lists/* \
     && ln -s /usr/bin/python3 /usr/bin/python
 
