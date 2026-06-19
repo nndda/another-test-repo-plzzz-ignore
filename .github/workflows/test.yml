@@ -29,4 +29,4 @@ jobs:
           context: .
           push: true
           tags: nndda/another-test-image
-          file: ./uwu/Dockerfile
+          file: ./config/Dockerfile

@@ -2,13 +2,13 @@ FROM debian:12-slim
 
 WORKDIR /site
 
-# COPY \
-#   ../../package.json \
-#   ../../bun.lock \
-#   requirements.txt \
-#   ./
+COPY \
+  ../../package.json \
+  ../../bun.lock \
+  requirements.txt \
+  ./
 
-SHELL ["/bin/bash", "-c"]
+SHELL [ "/bin/bash", "-c" ]
 
 RUN apt update && \
     apt install -y --no-install-recommends \
@@ -23,5 +23,12 @@ RUN apt update && \
 # Bun
 RUN curl -fsSL https://bun.com/install | bash -s "bun-v1.3.14"
 
-ENV BUN_INSTALL="$HOME/.bun"
+ENV BUN_INSTALL="/root/.bun"
 ENV PATH="$BUN_INSTALL/bin:$PATH"
+
+RUN bun ci
+
+# Python
+RUN python -m venv . && \
+  source ./bin/activate && \
+  pip install -r requirements.txt

@@ -3,6 +3,9 @@ name: test img
 on:
   workflow_dispatch:
 
+defaults:
+  shell: bash
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,9 +14,10 @@ jobs:
       credentials:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-  
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
       - run: bun --version
-        shell: bash
+      - run: python --version
+      - run: ls -l
