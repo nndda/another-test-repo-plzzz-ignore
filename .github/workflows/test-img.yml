@@ -14,12 +14,14 @@ jobs:
 
     steps:
       - run: |
+          ls -l /nnda.dev/
+      - run: bun --version
+      - run: python --version
+      - run: |
           git clone https://github.com/nndda/nnda.dev.git --depth 1 && \
           cp -r ./* /nnda.dev/ && \
           cd /nnda.dev && \
           source ./bin/activate
 
-      - run: bun --version
-      - run: python --version
       - run: ls -l ./
       - run: bun run build
