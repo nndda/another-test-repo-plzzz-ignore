@@ -12,6 +12,7 @@ RUN apt update && \
     apt install -y --no-install-recommends \
     curl \
     git \
+    ca-certificates \
     python3 \
     && rm -rf /var/lib/apt/lists/* \
     && ln -s /usr/bin/python3 /usr/bin/python
