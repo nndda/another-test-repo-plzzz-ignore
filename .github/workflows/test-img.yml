@@ -1,0 +1,18 @@
+name: test img
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: nndda/another-test-image:latest
+      credentials:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+  
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - run: bun --version
