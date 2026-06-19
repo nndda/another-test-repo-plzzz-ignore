@@ -24,3 +24,8 @@ jobs:
 
           bun run build
         shell: bash
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_PAT_EXT: ${{ secrets.GH_PAT_EXT }}
+          SITE_EXT: ${{ secrets.SITE_EXT }}
+          COMMIT_SHA: ${{ github.sha }}
