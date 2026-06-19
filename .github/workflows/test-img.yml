@@ -13,8 +13,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
       - run: bun --version
       - run: python --version
       - run: ls -l
