@@ -3,9 +3,6 @@ name: test img
 on:
   workflow_dispatch:
 
-defaults:
-  shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
