@@ -25,11 +25,12 @@ jobs:
           cp -arT . /nnda.dev
           cd /nnda.dev
 
+          git config --global --add safe.directory /nnda.dev
+
           python -m venv .
           source bin/activate
 
           ls -la
-          git rev-parse HEAD
 
           bun run build
         shell: bash
