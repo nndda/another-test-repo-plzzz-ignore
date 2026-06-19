@@ -36,4 +36,4 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
           GH_PAT_EXT: ${{ secrets.GH_PAT_EXT }}
           SITE_EXT: ${{ secrets.SITE_EXT }}
-          COMMIT_SHA: ${{ github.sha }}
+          COMMIT_SHA: 1addd8ada3b1de8a474cee4cf83a07f7aa9c864b
