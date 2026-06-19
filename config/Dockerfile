@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM node:26.3.1-trixie
 
 WORKDIR /nnda.dev
 
