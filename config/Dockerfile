@@ -5,7 +5,7 @@ WORKDIR /site
 COPY \
   ../../package.json \
   ../../bun.lock \
-  requirements.txt \
+  ./requirements.txt \
   ./
 
 SHELL [ "/bin/bash", "-c" ]
