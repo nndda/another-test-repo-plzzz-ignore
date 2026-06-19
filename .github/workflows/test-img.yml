@@ -1,6 +1,9 @@
 name: test img
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -24,6 +27,8 @@ jobs:
 
           python -m venv .
           source bin/activate
+
+          ls -la
 
           bun run build
         shell: bash
