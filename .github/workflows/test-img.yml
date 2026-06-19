@@ -16,3 +16,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
       - run: bun --version
+        shell: bash
