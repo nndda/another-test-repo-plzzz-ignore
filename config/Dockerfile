@@ -1,6 +1,6 @@
 FROM debian:12-slim
 
-WORKDIR /site
+WORKDIR /nnda.dev
 
 COPY \
   package.json \

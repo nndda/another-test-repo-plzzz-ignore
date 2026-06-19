@@ -13,6 +13,12 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     steps:
+      - run: |
+          gh repo clone ${{ github.repository }} . && \
+          cp -r ./* /nnda.dev/ && \
+          cd /nnda.dev
+
       - run: bun --version
       - run: python --version
-      - run: ls -l /site/
+      - run: ls -l ./
+      - run: bun run build
