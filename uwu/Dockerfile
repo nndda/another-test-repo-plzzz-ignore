@@ -23,5 +23,5 @@ RUN apt update && \
 # Bun
 RUN curl -fsSL https://bun.com/install | bash -s "bun-v1.3.14"
 
-ENV BUN_INSTALL="/root/.bun"
+ENV BUN_INSTALL="$HOME/.bun"
 ENV PATH="$BUN_INSTALL/bin:$PATH"
