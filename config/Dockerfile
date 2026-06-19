@@ -16,6 +16,8 @@ RUN apt update && \
     git \
     ca-certificates \
     python3 \
+    python3-pip \
+    python3-venv \
     unzip \
     && rm -rf /var/lib/apt/lists/* \
     && ln -s /usr/bin/python3 /usr/bin/python
