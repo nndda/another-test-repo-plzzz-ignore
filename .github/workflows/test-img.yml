@@ -29,6 +29,7 @@ jobs:
           source bin/activate
 
           ls -la
+          git rev-parse HEAD
 
           bun run build
         shell: bash
