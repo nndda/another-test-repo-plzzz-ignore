@@ -15,4 +15,4 @@ jobs:
     steps:
       - run: bun --version
       - run: python --version
-      - run: ls -l
+      - run: ls -l /site/
