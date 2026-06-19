@@ -3,9 +3,9 @@ FROM debian:12-slim
 WORKDIR /site
 
 COPY \
-  ../../package.json \
-  ../../bun.lock \
-  ./requirements.txt \
+  package.json \
+  bun.lock \
+  config/requirements.txt \
   ./
 
 SHELL [ "/bin/bash", "-c" ]
