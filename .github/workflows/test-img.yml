@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - run: |
-          gh repo clone ${{ github.repository }} . && \
+          git repo clone https://github.com/nndda/nnda.dev.git --depth 1 && \
           cp -r ./* /nnda.dev/ && \
           cd /nnda.dev && \
           source ./bin/activate
