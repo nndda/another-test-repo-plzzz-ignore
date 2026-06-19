@@ -14,6 +14,9 @@ jobs:
 
     steps:
       - run: |
+          bun --version
+          python --version
+
           git clone https://github.com/nndda/nnda.dev.git ./repo --depth 1
 
           cp -rT repo /nnda.dev
